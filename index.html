@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Responsive Page</title>
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Rajshekher</a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <button class="cta">Get Started</button>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Build modern websites — faster.</h1>
+          <p>Simple, responsive HTML & CSS template that’s easy to customize for portfolios, landing pages, or projects.</p>
+          <p class="hero-actions">
+            <a class="btn primary" href="#features">Explore features</a>
+            <a class="btn outline" href="#contact">Contact</a>
+          </p>
+        </div>
+        
+        <div class="hero-card">
+           <img src="s.png" alt="Abstract graphic of code and nodes" width="330px" height="330px" style="border-radius: 15px;">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2 class="section-title">Features</h2>
+      <div class="grid features-grid">
+        <article class="feature">
+          <h3>Responsive</h3>
+          <p>Layouts adapt from mobile to desktop using CSS Grid & Flexbox.</p>
+        </article>
+        <article class="feature">
+          <h3>Minimal</h3>
+          <p>Small stylesheet and clear structure — easy to extend.</p>
+        </article>
+        <article class="feature">
+          <h3>Accessible</h3>
+          <p>Keyboard-focusable controls and readable color contrast by default.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container portfolio">
+      <h2 class="section-title">Portfolio</h2>
+      <div class="grid portfolio-grid">
+        <div class="tile">Project A</div>
+        <div class="tile">Project B</div>
+        <div class="tile">Project C</div>
+        <div class="tile">Project D</div>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form" action="#" method="post" autocomplete="off">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Rajshekher — Built with HTML & CSS</p>
+      <ul class="social">
+        <li><a href="#" aria-label="Linkdin">L</a></li>
+        <li><a href="#" aria-label="GitHub">G</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle?.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
